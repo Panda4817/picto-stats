@@ -1,23 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import RoomStats from './components/roomStats/RoomStats';
+import WordCloud from './components/wordCloud/WordCloud';
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className='section'>
+        <h1>Rooms and number of players in Picto</h1>
+        <div className='content'>
+          <RoomStats />
+        </div>
+
+      </div>
+      <br />
+
+      <div className='section'>
+        <h1>Words drawn in Picto</h1>
+        <div className='content'>
+          <WordCloud />
+        </div>
+      </div>
     </div>
   );
 }
